@@ -47,7 +47,9 @@ fi
  cd $tmpdir
  wget -qO hugo.tar.gz $download_url
  tar xvzf hugo.tar.gz
+ if [[ "0.20" != $hugo_version ]] ; then
  mv hugo_${hugo_version}*/hugo_${version}* ./hugo
+ fi
  zip -r9 $zipfile hugo
 )
 
