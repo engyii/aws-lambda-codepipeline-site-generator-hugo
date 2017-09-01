@@ -43,11 +43,14 @@ fi
 if [[ "0.20" == $hugo_version ]] ; then
   download_url="${download_url}v0.20.6/hugo_0.20.6_Linux-64bit.tar.gz"
 fi
+if [[ "0.26" == $hugo_version ]] ; then
+  download_url="${download_url}v0.26/hugo_0.26_Linux-64bit.tar.gz"
+fi
 (
  cd $tmpdir
  wget -qO hugo.tar.gz $download_url
  tar xvzf hugo.tar.gz
- if [[ "0.20" != $hugo_version ]] ; then
+ if [[ "0.20" != $hugo_version ]] && [[ "0.26" != $hugo_version ]] ; then
  mv hugo_${hugo_version}*/hugo_${version}* ./hugo
  fi
  zip -r9 $zipfile hugo
