@@ -85,3 +85,7 @@ is launched.
 
 [stack]: https://github.com/alestic/aws-git-backed-static-website
 [hugo]: https://gohugo.io/
+
+# build script example
+
+ ./build-upload-aws-lambda-function run2.engyzone.net us-east-1 lambda/aws-lambda-site-generator-hugo-0.41.zip 0.41
